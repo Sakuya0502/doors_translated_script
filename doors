@@ -2,28 +2,34 @@ local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shle
 getgenv().SecureMode = true
 
 local Window = Rayfield:CreateWindow({
-	Name = "Doors - Furk Ultra",
-	LoadingTitle = "Doors - Furk Ultra",
-	LoadingSubtitle = "Subscribe to Furky on YouTube!",
+	Name = "Doors - 外掛腳本",
+	LoadingTitle = "Doors - 外掛腳本",
+	LoadingSubtitle = "此腳本為英翻中腳本",
 })
-local Tab = Window:CreateTab("Main GUI's")
-local Section = Tab:CreateSection("Doors Main GUI's")
-local Label = Tab:CreateLabel("Thanks for using Furk Ultra!")
-local TabUtil = Window:CreateTab("Utility GUI's")
-local SectionUtil = TabUtil:CreateSection("Doors Utility GUI's")
-local LabelUtil = TabUtil:CreateLabel("Thanks for using Furk Ultra!")
+local Tab = Window:CreateTab("主要界面")
+local Section = Tab:CreateSection("Doors 主要界面")
+local Label = Tab:CreateLabel("感謝使用此整合腳本!")
+local TabUtil = Window:CreateTab("實用界面")
+local SectionUtil = TabUtil:CreateSection("Doors 實用界面")
+local LabelUtil = TabUtil:CreateLabel("感謝使用此整合腳本!")
 
 local Button = Tab:CreateButton({
-	Name = "OminousVibes hub (NEW BEST)",
+	Name = "OminousVibes hub (新版本推薦)",
 	Callback = function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/OminousVibes-Exploit/Scripts/main/doors/loadstring.lua"))()
 
 	end,
 })
 local Button = Tab:CreateButton({
-	Name = "Vynixius Hub (#1)",
+	Name = "Vynixius Hub (最推薦)",
 	Callback = function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Vynixius/main/Doors/Script.lua"))()
+	end,
+})
+local Button = Tab:CreateButton({
+	Name = "Infinite Yield Hub (新加入!)",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
 	end,
 })
 local Button = Tab:CreateButton({
@@ -40,19 +46,19 @@ local Button = Tab:CreateButton({
 	end,
 })
 local Button = Tab:CreateButton({
-	Name = "Darkrai Hub (for android)",
+	Name = "Darkrai Hub (安卓專用)",
 	Callback = function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/GamingScripter/Darkrai-X/main/Games/Doors"))()
 	end,
 })
 local Button = Tab:CreateButton({
-	Name = "Crimson Hub (Key!)",
+	Name = "Crimson Hub (需要代碼)",
 	Callback = function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/toosiwhip/statue/main/crimsonhub-statue.lua"))()
 	end,
 })
 local Button = TabUtil:CreateButton({
-	Name = "Get Crucifix",
+	Name = "獲得十字架",
 	Callback = function()
 		local Item = game:GetObjects("rbxassetid://11583101826")[1]
 Item.Parent = game.Players.LocalPlayer.Backpack
@@ -60,7 +66,7 @@ Item.Parent = game.Players.LocalPlayer.Backpack
 	end,
 })
 local Button = TabUtil:CreateButton({
-	Name = "Entity Spawner Hub (will close this Hub!)",
+	Name = "實體生成腳本 (會關閉其他腳本!)",
 	Callback = function()
 		loadstring(game:HttpGet('https://raw.githubusercontent.com/plamen6789/DoorsEntitySummonerGUI/main/EntityGUI'))()
 	end,
